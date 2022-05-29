@@ -234,4 +234,11 @@ describe('Central de Atendimento ao Cliente TAT', function () {
 
             })
     })
+
+    it('encontre o gato', function () {
+        cy.get('#cat')
+            .should('not.be.visible')
+            .invoke('show')
+            .should('be.visible')
+    })
 })
